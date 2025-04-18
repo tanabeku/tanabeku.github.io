@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaji Research Group</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+        }
+
+        /* Header styles */
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #7f1146;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #7f1146;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(179, 136, 255, 0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #7f1146;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #666;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section styles */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #7f1146;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Conference section */
+        .conference-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .conference-item {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #7f1146;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .conference-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(127, 17, 70, 0.1);
+        }
+
+        .conference-title {
+            color: #7f1146;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .conference-date {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .conference-description {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Photo gallery styles */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
+        }
+
+        /* Contact info styles */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .info-item {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #7f1146;
+        }
+
+        .info-item h3 {
+            color: #7f1146;
+            margin-bottom: 1rem;
+        }
+
+        .info-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #7f1146;
+        }
+
+        button {
+            background-color: #7f1146;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #9f1b5e;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+        }
+
+        /* People section styles */
+        .people-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .member-group {
+            margin-bottom: 3rem;
+        }
+
+        .group-title {
+            color: #7f1146;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #7f1146;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .member-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-name {
+            color: #7f1146;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-position {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-contact {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .member-contact a {
+            color: #7f1146;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .member-contact a:hover {
+            color: #9f1b5e;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Home section styles */
+        .home-section {
+            padding: 8rem 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .home-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-title {
+            color: #7f1146;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-family: 'Lora', serif;
+        }
+
+        .home-description {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .nav-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .nav-card {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-card h3 {
+            color: #7f1146;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .nav-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .home-section {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .nav-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Kaji Research Group</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#people">People</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#conference">Conference Presentation</a></li>
+                <li><a href="#photo">Photo</a></li>
+                <li><a href="#contact">Contact Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-content">
+                <h1 class="home-title">Welcome to Kaji Research Group</h1>
+                <div class="home-description">
+                    <p>加地研究室は、化学と材料科学の分野で革新的な研究を行っています。私たちの研究室では、新しい機能性材料の開発とその応用に関する研究に取り組んでいます。</p>
+                    <p>特に、有機電子材料、ナノ材料、エネルギー変換材料などの分野で、基礎研究から応用研究まで幅広い研究活動を展開しています。学生一人一人が主体的に研究に取り組み、国際的な研究発表や論文執筆を通じて、研究者としての成長を目指しています。</p>
+                    <p>研究室では、活発なディスカッションと共同研究を重視し、新しいアイデアや技術の創出に努めています。また、国内外の研究機関との共同研究も積極的に行い、グローバルな視点での研究活動を推進しています。</p>
+                </div>
+                <div class="nav-cards">
+                    <a href="#people" class="nav-card">
+                        <h3>People</h3>
+                        <p>研究室のメンバー紹介</p>
+                    </a>
+                    <a href="#research" class="nav-card">
+                        <h3>Research</h3>
+                        <p>研究内容の詳細</p>
+                    </a>
+                    <a href="#publications" class="nav-card">
+                        <h3>Publications</h3>
+                        <p>研究業績一覧</p>
+                    </a>
+                    <a href="#conference" class="nav-card">
+                        <h3>Conference</h3>
+                        <p>学会発表情報</p>
+                    </a>
+                    <a href="#photo" class="nav-card">
+                        <h3>Photo</h3>
+                        <p>研究活動の様子</p>
+                    </a>
+                    <a href="#contact" class="nav-card">
+                        <h3>Contact</h3>
+                        <p>お問い合わせ</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="people" class="people-section">
+            <h2>People</h2>
+            
+            <!-- 教授 -->
+            <div class="member-group">
+                <h3 class="group-title">教授</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">加地 大介</h4>
+                        <p class="member-position">教授 / Professor</p>
+                        <div class="member-contact">
+                            <a href="mailto:example@example.com">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 准教授 -->
+            <div class="member-group">
+                <h3 class="group-title">准教授</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">准教授の名前</h4>
+                        <p class="member-position">准教授 / Associate Professor</p>
+                        <div class="member-contact">
+                            <a href="mailto:example@example.com">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 助教 -->
+            <div class="member-group">
+                <h3 class="group-title">助教</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">助教の名前</h4>
+                        <p class="member-position">助教 / Assistant Professor</p>
+                        <div class="member-contact">
+                            <a href="mailto:example@example.com">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M2 -->
+            <div class="member-group">
+                <h3 class="group-title">修士2年</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">M2学生1</h4>
+                        <p class="member-position">修士2年 / M2</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M2学生2</h4>
+                        <p class="member-position">修士2年 / M2</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M2学生3</h4>
+                        <p class="member-position">修士2年 / M2</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M2学生4</h4>
+                        <p class="member-position">修士2年 / M2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M1 -->
+            <div class="member-group">
+                <h3 class="group-title">修士1年</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">M1学生1</h4>
+                        <p class="member-position">修士1年 / M1</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M1学生2</h4>
+                        <p class="member-position">修士1年 / M1</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M1学生3</h4>
+                        <p class="member-position">修士1年 / M1</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M1学生4</h4>
+                        <p class="member-position">修士1年 / M1</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">M1学生5</h4>
+                        <p class="member-position">修士1年 / M1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B4 -->
+            <div class="member-group">
+                <h3 class="group-title">学部4年</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">B4学生1</h4>
+                        <p class="member-position">学部4年 / B4</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">B4学生2</h4>
+                        <p class="member-position">学部4年 / B4</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">B4学生3</h4>
+                        <p class="member-position">学部4年 / B4</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">B4学生4</h4>
+                        <p class="member-position">学部4年 / B4</p>
+                    </div>
+                    <div class="member-card">
+                        <h4 class="member-name">B4学生5</h4>
+                        <p class="member-position">学部4年 / B4</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research</h2>
+            <div class="about-content">
+                <p>研究内容の詳細を掲載予定です。</p>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Publications</h2>
+            <div class="about-content">
+                <p>研究業績を掲載予定です。</p>
+            </div>
+        </section>
+
+        <section id="conference" class="conference-section">
+            <h2>Conference Presentations</h2>
+            <div class="conference-item">
+                <h3 class="conference-title">2025 Conference Presentation</h3>
+                <p class="conference-date">2025</p>
+                <p class="conference-description">
+                    最新の研究成果を発表しました。詳細な内容については、お問い合わせください。
+                </p>
+            </div>
+        </section>
+
+        <section id="photo" class="section">
+            <h2>Photo</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="https://lh3.googleusercontent.com/_gxctYJs-XZUhhIF1NuqGfKAxdYPvsmaz3GaK8rD_broQEzGfG7Q5fadEhwUk59V0V91x4HH39kZ44nlnNN_KDL_lG5unVxlsb5HKqINdaALi9YHN7WQ3uYGgmIvY74c9Q=w1280" alt="第61回化学関連支部合同九州大会">
+                    <div class="photo-caption">
+                        <h3>第61回化学関連支部合同九州大会</h3>
+                        <p>学会発表の様子</p>
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://lh4.googleusercontent.com/zSNiLBX6UnDOk_a4OCrxuegeUgI0MfphrBfSmQg_IzDS3EhKwNxoyHaV9rCfmNnpGZXkGQ=w16383" alt="Research Activity">
+                    <div class="photo-caption">
+                        <h3>Research Activity</h3>
+                        <p>研究活動の様子</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Info</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>Address</h3>
+                    <p>研究室の住所を記載予定です。</p>
+                </div>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <p>連絡先メールアドレスを記載予定です。</p>
+                </div>
+                <div class="info-item">
+                    <h3>Phone</h3>
+                    <p>電話番号を記載予定です。</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="お名前" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="メッセージ" required></textarea>
+                    </div>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Kaji Research Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
