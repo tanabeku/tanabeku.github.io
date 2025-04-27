@@ -13,50 +13,76 @@
         .section.active {
             display: block;
         }
+
+        /* Photo section styles */
+        .additional-photos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .additional-photo {
+            max-width: 45%;
+            height: auto;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
     <main>
         <section id="home" class="section active">
-            <div class="home-content">
-                <h1 class="home-title">加地研究室</h1>
-                <div class="nav-cards">
-                    <a href="#" data-section="people" class="nav-card">
-                        <h3>People</h3>
-                    </a>
-                    <a href="#" data-section="research" class="nav-card">
-                        <h3>Research</h3>
-                    </a>
-                    <a href="#" data-section="publications" class="nav-card">
-                        <h3>Publications</h3>
-                    </a>
-                    <a href="#" data-section="conference" class="nav-card">
-                        <h3>Conference</h3>
-                    </a>
-                    <a href="#" data-section="photo" class="nav-card">
-                        <h3>Photo</h3>
-                    </a>
-                    <a href="#" data-section="access" class="nav-card">
-                        <h3>Access</h3>
-                    </a>
-                </div>
+            <h1 class="home-title">Kaji Research Group</h1>
+            <div class="research-intro">
+                <p>半導体分野における微細加工技術を駆使して作製したマイクロ・ナノ空間を、生体関連物質や細胞の計測・診断の「場」として用いることで、新しいバイオ分析技術を創出すべく研究開発を行っています。最終的にはこのようなLab-on-a-Chip（µTAS）という分析技術をさらに拡張して、生命（生命現象）をチップ上で人工的に再現できるようなLife-on-a-Chipの創成を目指しています。 </p>
+                <p>加地研究室は、2018年1月に加地教授が着任し、同年4月から学生が配属されてスタートしました。配属される方は、研究に自主的かつ意欲的に取り組める方、我こそが分析化学の新しい研究分野を切り拓いていくというパイオニア精神にあふれた方を歓迎します。また、国内外を問わず他研究機関との共同研究や留学生の受け入れを積極的に推進していくため、考え方の多様性を受容でき、協調性のある情熱にあふれた熱い方を歓迎します。各々が研究室を支えているという当事者意識を大事にしながら有意義な学生生活を送れるよう、スタッフとともに頑張りましょう。 </p>
             </div>
+            <div class="group-photo">
+                <img src="img/Group_photo.jpg" alt="Kaji Research Group Members" class="group-photo-img">
+            </div>
+            <div class="nav-cards">
+                <a href="#" data-section="people" class="nav-card">
+                    <h3>People</h3>
+                </a>
+                <a href="#" data-section="research" class="nav-card">
+                    <h3>Research</h3>
+                </a>
+                <a href="#" data-section="publications" class="nav-card">
+                    <h3>Publications</h3>
+                </a>
+                <a href="#" data-section="conference" class="nav-card">
+                    <h3>Conference</h3>
+                </a>
+                <a href="#" data-section="photo" class="nav-card">
+                    <h3>Photo</h3>
+                </a>
+                <a href="#" data-section="access" class="nav-card">
+                    <h3>Access</h3>
+                </a>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
         </section>
 
-        <section id="people" class="section">
+        <section id="people" class="section people-section">
             <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="research" class="nav-link">Research</a>
-                <a href="#" data-section="publications" class="nav-link">Publications</a>
-                <a href="#" data-section="conference" class="nav-link">Conference</a>
-                <a href="#" data-section="photo" class="nav-link">Photo</a>
-                <a href="#" data-section="access" class="nav-link">Access</a>
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
             </div>
             <h2>People</h2>
             
             <!-- 教授 -->
             <div class="member-group">
-                <h3 class="group-title">教授</h3>
+                <h3 class="group-title">Professor</h3>
                 <div class="members-grid">
                     <div class="member-card">
                         <h4 class="member-name">加地 範匡</h4>
@@ -66,7 +92,7 @@
 
             <!-- 准教授 -->
             <div class="member-group">
-                <h3 class="group-title">准教授</h3>
+                <h3 class="group-title">Associate Professor</h3>
                 <div class="members-grid">
                     <div class="member-card">
                         <h4 class="member-name">財津 慎一</h4>
@@ -76,205 +102,571 @@
 
             <!-- 助教 -->
             <div class="member-group">
-                <h3 class="group-title">助教</h3>
+                <h3 class="group-title">Assistant Professor</h3>
                 <div class="members-grid">
                     <div class="member-card">
-                        <h4 class="member-name">助教の名前</h4>
+                        <h4 class="member-name">梁 逸偉</h4>
                     </div>
                 </div>
             </div>
 
             <!-- 学術研究員 -->
             <div class="member-group">
-                <h3 class="group-title">学術研究員</h3>
+                <h3 class="group-title">Visiting Researchers</h3>
                 <div class="members-grid">
                     <div class="member-card">
-                        <h4 class="member-name">研究員の名前</h4>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 事務員 -->
-            <div class="member-group">
-                <h3 class="group-title">事務員</h3>
-                <div class="members-grid">
-                    <div class="member-card">
-                        <h4 class="member-name">事務員の名前</h4>
+                        <h4 class="member-name">王 昌民</h4>
                     </div>
                 </div>
             </div>
 
             <!-- M2 -->
             <div class="member-group">
-                <h3 class="group-title">修士2年</h3>
+                <h3 class="group-title">M2</h3>
                 <div class="members-grid">
                     <div class="member-card">
-                        <h4 class="member-name">M2学生1</h4>
+                        <h4 class="member-name">田中 竣也</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M2学生2</h4>
+                        <h4 class="member-name">堤 悠生</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M2学生3</h4>
+                        <h4 class="member-name">前田 陽樹</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M2学生4</h4>
+                        <h4 class="member-name">義永 晴雲</h4>
                     </div>
                 </div>
             </div>
 
             <!-- M1 -->
             <div class="member-group">
-                <h3 class="group-title">修士1年</h3>
+                <h3 class="group-title">M1</h3>
                 <div class="members-grid">
                     <div class="member-card">
-                        <h4 class="member-name">M1学生1</h4>
+                        <h4 class="member-name">石村 晃司</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M1学生2</h4>
+                        <h4 class="member-name">金子 知輝</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M1学生3</h4>
+                        <h4 class="member-name">國竹 祐亮</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M1学生4</h4>
+                        <h4 class="member-name">日髙 凌央</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">M1学生5</h4>
+                        <h4 class="member-name">渡邉 萌</h4>
                     </div>
                 </div>
             </div>
 
             <!-- B4 -->
             <div class="member-group">
-                <h3 class="group-title">学部4年</h3>
+                <h3 class="group-title">B4</h3>
                 <div class="members-grid">
                     <div class="member-card">
-                        <h4 class="member-name">B4学生1</h4>
+                        <h4 class="member-name">宇田津 良太</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">B4学生2</h4>
+                        <h4 class="member-name">木須 駿介</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">B4学生3</h4>
+                        <h4 class="member-name">嶋田 脩悟</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">B4学生4</h4>
+                        <h4 class="member-name">田代 陽斗</h4>
                     </div>
                     <div class="member-card">
-                        <h4 class="member-name">B4学生5</h4>
+                        <h4 class="member-name">田邉 陽奈</h4>
                     </div>
                 </div>
             </div>
+
+            <!-- 事務員 -->
+            <div class="member-group">
+                <h3 class="group-title">Administrative assistants</h3>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <h4 class="member-name">寺坂 清香</h4>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
         </section>
 
-        <section id="research" class="section">
+        <section id="research" class="section research-section">
             <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="people" class="nav-link">People</a>
-                <a href="#" data-section="publications" class="nav-link">Publications</a>
-                <a href="#" data-section="conference" class="nav-link">Conference</a>
-                <a href="#" data-section="photo" class="nav-link">Photo</a>
-                <a href="#" data-section="access" class="nav-link">Access</a>
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
             </div>
             <h2>Research</h2>
             <div class="about-content">
-                <p>研究内容の詳細を掲載予定です。</p>
-            </div>
-        </section>
-
-        <section id="publications" class="section">
-            <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="people" class="nav-link">People</a>
-                <a href="#" data-section="research" class="nav-link">Research</a>
-                <a href="#" data-section="conference" class="nav-link">Conference</a>
-                <a href="#" data-section="photo" class="nav-link">Photo</a>
-                <a href="#" data-section="access" class="nav-link">Access</a>
-            </div>
-            <h2>Publications</h2>
-            <div class="about-content">
-                <p>研究業績を掲載予定です。</p>
-            </div>
-        </section>
-
-        <section id="conference" class="section">
-            <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="people" class="nav-link">People</a>
-                <a href="#" data-section="research" class="nav-link">Research</a>
-                <a href="#" data-section="publications" class="nav-link">Publications</a>
-                <a href="#" data-section="photo" class="nav-link">Photo</a>
-                <a href="#" data-section="access" class="nav-link">Access</a>
-            </div>
-            <h2>Conference Presentations</h2>
-            <div class="conference-item">
-                <h3 class="conference-title">2025 Conference Presentation</h3>
-                <p class="conference-date">2025</p>
-                <p class="conference-description">
-                    最新の研究成果を発表しました。詳細な内容については、お問い合わせください。
+                <p>
+                    現在、日本人の2人に1人ががんと診断され、3人に1人ががんで亡くなっています。高齢化社会の進展に伴い、がん患者数は増加すると予測されています。がんの早期発見・早期治療が強く望まれています。同時に、細菌感染症は、抗生物質の乱用により、薬剤耐性菌が出現し、新たな社会問題となっています。
+                </p>
+                <p>
+                    現在、日本人の2人に1人ががんを患い、3人に1人ががんで亡くなっています。今後、高齢化社会が進展するに従って、ますますがんの患者数は増加することが予測され、がんの早期発見・早期治療が強く望まれています。また、がんと同時に、結核をはじめとする再興感染症や薬剤耐性菌といった細菌感染症の問題も顕在化してきており、早期検出法の開発も望まれています。このような時代背景を鑑みると、いかに高感度（少ないがん細胞数）で正確（擬陽性のない）、かつ患者さんに精神的・肉体的負担（採血やバイオプシー）の少ない低・非侵襲的分析法を研究・開発して提供するかが、分析化学者としてのひとつの使命であると考えます。当研究室では、このような社会問題解決のために、ナノバイオテクノロジーを駆使した分析法を開発することで挑んでいきたいと思います。下記に研究の一例を示します。
                 </p>
             </div>
+            <div class="research-items">
+                <div class="research-item">
+                    <h3>単一細胞・細菌解析法の開発</h3>
+                    <div class="research-content">
+                        <p>細胞や細菌が有する情報、例えば遺伝子配列情報などは、比較的簡単かつ低コストで分析できる時代になりました。しかしながら、これらはほとんどが細胞などを破壊する破壊分析法であり、再生医療などにおける細胞の品質保証などに適用することはできません。そこで本研究では、細胞を「触って診断」できるようなマイクロ流体デバイスを開発し、非染色・非破壊な単一細胞解析法を開発し、先進医療に貢献する分析技術の創成に取り組んでいます。</p>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h3>人工細胞・細胞外小胞の作製・解析法の開発とバイオ分析・創薬・医療への応用</h3>
+                    <div class="research-content">
+                        <p>細胞が放出する直径約50 nmから数mmの細胞外小胞（EV）は、起源となる細胞の核酸やタンパク質を含有し、全身の体液中に豊富に存在するため、特にエクソソームが低侵襲に採取可能な新しい疾患バイオマーカーとして期待を集めています。しかしながら、抽出法や評価法などに確立された方法論がない上、heterogeneityの高い物質であるため、新しい解析法が求められています。そこで本研究では、EVの「粒子」としての性質と「内包物」情報を単一EVレベルで検知できるデバイスを開発し、有用なEVだけを回収して医療応用できるデバイス開発を行っています。 </p>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h3>腸内細菌叢研究のためのマイクロ流体デバイス</h3>
+                    <div class="research-content">
+                        <p>私たちの腸内に棲息する無数の細菌たちの機能を活用することで，私たちは健康な生活を送っています。しかし，この菌の共生環境が形成されるまでの過程についてはよく知られていません。本研究では，微細加工技術を利用して腸内に似た環境を作製し，体内で細菌がいつ，どこで，どのように住み着くのかを観察する手法の開発を目指しています。</p>
+                    </div>
+                </div>
+                <div class="research-item">
+                    <h3>レーザー光を用いた最先端分析技術の研究 </h3>
+                    <div class="research-content">
+                        <p>これまで分析化学の分野では使われていなかった新しいツールと、独自に開発したレーザー光源を組み合わせて、オリジナルの分析技術を研究しています。例えば「分散補償型高フィネス共振器」は、私達が初めて提案した、分析機器の性能を飛躍的に向上する可能性のある仕組みです。このようなアプローチによって、レーザー光を利用した極限の分析技術の開発を目指しています。さらにこれらの手法は、分析技術のみならず、レーザー光を世界最高の速度で変調する(周期的な変化を与える)方法などの、これまでない機能を有するデバイスへの発展も可能です。</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
         </section>
 
-        <section id="photo" class="section">
+        <section id="publications" class="section publications-section">
             <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="people" class="nav-link">People</a>
-                <a href="#" data-section="research" class="nav-link">Research</a>
-                <a href="#" data-section="publications" class="nav-link">Publications</a>
-                <a href="#" data-section="conference" class="nav-link">Conference</a>
-                <a href="#" data-section="access" class="nav-link">Access</a>
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
+            </div>
+            <h2>Publications</h2>
+            <div class="publications-content">
+                <!-- 2025 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2025</h3>
+                    <div class="publication-category">
+                        <h4>Articles</h4>
+                        <ul>
+                            <li>1. N. Kaji, Mechanical phenotype of cancer cells and its measurement methodology, Highlights in Analytical Sciences, 41, 185 (2025) DOI: 10.1007/s44211-025-00714-y</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2024</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. K. Tsuji, T. Tanigawa, Y. Tsutsumi, T. Kubo, N. Kaji, An initial study of cell separation based on mechanical properties using a sponge-like monolithic polymer, Talanta Open, 9, 100321 (2024) DOI: 10.1016/j.talo.2024.100321</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Book Chapter</h4>
+                        <ul>
+                            <li>1. 山川暢太、加地範匡、第10章　腸内細菌叢分析を実現するマイクロ腸モデルの開発、都甲潔、小柳道啓　監修、おいしさを創るフードテックの新展開、シーエムシー出版、130-137、監修：都甲潔、小柳道啓、 ISBN: 978-4-7813-1811-0</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2023</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. K. Iijima, N. Kaji, M. Tokeshi, Y. Baba, Micro- and nanochamber array system for single enzyme assays, Scientific Reports, 13, 13322 (2023) DOI: 10.1038/s41598-023-40544-4</li>
+                            <li>2. Y. Kishimoto, S. Ide, T. Naito, Y. Nakashima, Y. Nakanishi, N. Kaji, Development of a microfluidic ion current measurement system for a single microplastic detection, Journal of Robotics and Mechatronics, 35, 1193 (2023) DOI: 10.20965/jrm.2023.p1193</li>
+                            <li>3. Y. Banno, T. Nomiyama, S. Okuno, S. Ide, N. Kaji, Quantitative Evaluation of Interleukin-4 by Immunowall Devices Made of Gelatin Methacryloyl Hydrogel, Molecules, 28, 4635 (2023) DOI: 10.3390/molecules28124635</li>
+                            <li>4. Y. Onizuka, K. Fujita, S. Ide, T. Naito, N. Kaji, Antioxidants encapsulated milk-derived exosomes for functional food development, Analytical Sciences, 39, 705-712 (2023), DOI: 10.1007/s44211-023-00278-9</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Refereed Conference proceedings</h4>
+                        <ul>
+                            <li>1. T. Nomiyama, S. Ide, N. Kaji, Development of a microfluidic device for mesurement of deformability and pluripotency from the same cell, The proceedings of μTAS 2023, Katowice, Poland (2023)
+                            <li>2. Y. Banno, T. Nomiyama, S. Okuno, N. Kaji, Gelma-hydrogel immunowall device for IL-6 quantitation in human serum, The proceedings of μTAS 2023, Katowice, Poland (2023)
+                            <li>3. Y. Yamakawa, W. Iwasaki, N. Kaji, Fabrication of villi microintenstinal structures for evaluation of intestinal microbiota, The proceedings of μTAS 2023, Katowice, Poland (2023)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2022</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. Y. M. Metias, M. M. Hosny, M. M. Ayad, N. Kaji, High‐throughput spectrofluorimetric approach for one-step, sensitive, and green assays of alfuzosin hydrochloride using a 96-well microplate reader: Application to tablet formulations and human urine, Talanta Open, 6, 100139 (2022) DOI: 10.1016/j.talo.2022.100139
+                            <li>2. H. Murahara, N. Kaji, M. Tokeshi, Y. Baba, Enzyme kinetics in confined geometries at a single enzyme level, Analyst, 147, 1375-1384 (2022) DOI: 10.1039/d1an02024b</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2021</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. T. Kasama, M. Sun, N. Kaji, S. i. Akiyama, Y. Yuzawa, M. Tokeshi, S. Matsuo, Y. Baba, Microchip immunoassays for monitoring renal function: Rapid, low-cost, and highly sensitive quantification of urinary biomarkers of diabetic nephropathy, Micromachines, 12, 1353 (2021) DOI: 10.3390/mi12111353   
+                            <li>2. M. Terada, S. Ide, T. Naito, N. Kimura, M. Matsusaki, N. Kaji, Label-free cancer stem-like cell assay conducted at a single cell level using microfluidic mechanotyping devices, Analytical Chemistry, 93, 14409-14416 (2021) DOI: 10.1021/acs.analchem.1c02316 - This paper was selected as a supplementary journal cover picture of Analytical Chemistry. 
+                            <li>3. T. Yasui, P. Paisrisarn, T. Yanagida, Y. Konakade, Y. Nakamura, K. Nagashima, M. Musa, I. A. Thiodorus, H. Takahashi, T. Naganawa, T. Shimada, N. Kaji, T. Ochiya, T. Kawai and Y. Baba, Molecular profiling of extracellular vesicles via charge-based capture using oxide nanowire microfluidics, Biosensors and Bioelectronics, 113589 (2021) DOI: 10.1016/j.bios.2021.113589
+                            <li>4. H. Takahashi, T. Yasui, H. Kashida, K. Makino, K. Shinjo, Q. Liu, T. Shimada, S. Rahong, N. Kaji, H. Asanuma, Y. Baba, Microheater-integrated zinc oxide nanowire microfluidic device for hybridization-based detection of target single-stranded DNA, Nanotechnology, 32, 255301 (2021) DOI: 10.1088/1361-6528/abef2c
+                            <li>5. S. Ryuzaki, T. Yasui, M. Tsutsui, K. Yokota, Y. Komoto, P. Paisrisarn, N. Kaji, D. Ito, K. Tamada, T. Ochiya, M. Taniguchi, Y. Baba, T. Kawai, Rapid discrimination of extracellular vesicles by shape distribution analysis, Analytical Chemistry, 93, 7037-7044 (2021) DOI: 10.1021/acs.analchem.1c00258 
+                            <li>6. A. M. Zeid, J. J. M. Nasr, F. Belal, M. Walash, N. Kaji, Y. Baba, Microfluidic fast chiral separation of baclofen and phenylalanine enantiomers based on cyclodextrin-electrokinetic chromatography, Microchemical Journal, 160, 105770 (2021) DOI:10.1016/j.microc.2020.105770
+                            <li>7. A. M. Zeid, J. J. M. Nasr, F. Belal, M. I. Walash, Y. Baba, N. Kaji, Determination of three antiepileptic drugs in pharmaceutical formulations using microfluidic chips coupled with light-emitting diode induced fluorescence detection, Spectrochimica Acta. Part A: Molecular and Biomolecular Spectroscopy, 246, 119021 (2021) DOI:10.1016/j.saa.2020.119021 </li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Articles</h4>
+                        <ul>
+                            <li>1. 加地範匡、細胞核・細胞質内分子夾雑系定量評価法の開発、8, 9, 2021 Sep., CMCB NEWS LETTER
+                            <li>2. 寺田美悠, 井手幸子, 内藤豊裕, 松崎典弥, 加地範匡, 単一細胞変形能測定によるヒト結腸腺がん細胞の多能性評価, 化学とマイクロ・ナノシステム, 20, 29-30 (2021) ISSN:1881-364X
+                            <li>3. 加地範匡、ナノピラー、先端の分析法　新訂第2版、株式会社エヌ・ティー・エス、506-510. ISBN: 978-4-86043-737-4
+                            <li>4. 木村笑、内藤豊裕、加地範匡、配列分析、先端の分析法　新訂第2版、株式会社エヌ・ティー・エス、802-807. ISBN: 978-4-86043-737-4
+                            <li>5. 内藤豊裕、木村笑、加地範匡、第3章　マイクロ流体デバイスによる単一がん細胞診断、188-194, 2021, in AI・ナノ・量子による超高感度・迅速バイオセンシング ―超早期パンデミック検査・超早期診断・POCTから健康長寿社会へ―（馬場嘉信、柳田剛、加地範匡　監修）、シーエムシー出版</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Books</h4>
+                        <ul>
+                            <li>1. 馬場嘉信、柳田剛、加地範匡　監修、AI・ナノ・量子による超高感度・迅速バイオセンシング ―超早期パンデミック検査・超早期診断・POCTから健康長寿社会へ―、シーエムシー出版、2021</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2020</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. T. Shimada, T. Yasui, A. Yonese, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, Mechanical rupture-based antibacterial and cell-compatible ZnO/SiO2 nanowire structures formed by bottom-up approaches, Micromachines, 11, 610 (2020)  DOI:10.3390/mi11060610
+                            <li>2. H. Suzuki, K. Fujiyoshi, N. Kaji, M. Tokeshi, Y. Baba, Observation of ethanol-induced condensation and decondensation processes at a single DNA molecular level in microfluidic devices equipped with a rapid solution exchange system, Analytical Chemistry, 92, 9132-9137 (2020) DOI:10.1021/acs.analchem.0c01417
+                            <li>3. T. Suzuki, N. Kaji, H. Yasaki, T. Yasui, Y. Baba,  Mechanical low-pass filtering of cells for detection of circulating tumor cells in whole blood, Analytical Chemistry,  92, 2483-2491 (2020) DOI:10.1021/acs.analchem.9b03939
+                            <li>4. N. Yogo, T. Hase, T. Kasama, K. Nishiyama, N. Ozawa, T. Hatta, H. Shibata, M. Sato, K. Komeda, N. Kawabe, K. Matsuoka, T. F. Chen-Yoshikawa, N. Kaji, M. Tokeshi, Y. Baba, Y. Hasegawa, Development of an immuno-wall device for the rapid and sensitive detection of egfr mutations in tumor tissues resected from lung cancer patients, PloS One, 15, e0241422 (2020) DOI: 10.1371/journal.pone.0241422
+                            <li>5. 三浦夏琳, 井手幸子, 内藤豊裕, 嶋田泰佑, 安井隆雄, 馬場嘉信, 加地範匡, 九州大学伊都キャンパスにおけるPM2.5の生物学的観点からの実態調査・分析, 分析化学, 12, 741-746 (2020) DOI: 10.2116/bunsekikagaku.69.741</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Refereed Conference proceedings</h4>
+                        <ul>
+                            <li>1. M. Terada, S. Ide, T. Naito, M. Matsusaki, N. Kaji, Evaluation of pluripotency in human intestinal cells by microfluidic-based single cell deformability analysis, The proceedings of μTAS 2020, Online, 1049-1050 (2020)</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Articles</h4>
+                        <ul>
+                            <li>加地範匡, マイクロ流体デバイスによる単一細菌・単一細胞の電気的センシング技術, 応用物理学会 有機分子・バイオエレクトロニクス分科会 (Molecular Electronics and Bioelectronics) 会誌, 31, 243-248 (2020) ISSN: 2423-8805</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2019</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. M. Sano, N. Kaji, A. C. Rowat, H. Yasaki, L. Shao, H. Odaka, T. Yasui, T. Higashiyama, Y. Baba,  Microfluidic mechanotyping of a single cell with two consecutive constrictions of different sizes and an electrical detection system, Analytical Chemistry, 91, 12890-12899 (2019) - This paper was selected as a supplementary journal cover picture of Analytical Chemistry. DOI:10.1021/acs.analchem.9b02818
+                            <li>2. Y. Hattori, T. Shimada, T. Yasui, N. Kaji, Y. Baba, Micro- and nanopillar chips for continuous separation of extracellular vesicles, Analytical Chemistry, 91, 6514-6521 (2019) DOI:10.1021/acs.analchem.8b05538
+                            <li>3. T. Yasui, T. Yanagida, T. Shimada, K. Otsuka, M. Takeuchi, K. Nagashima, S. Rahong, T. Naito, D. Takeshita, A. Yonese, R. Magofuku, Z. Zhu, N. Kaji, M. Kanai, T. Kawai, Y. Baba, Engineering nanowire-mediated cell lysis for microbial cell identification, Acs Nano, 13, 2262-2273 (2019) DOI: 10.1021/acsnano.8b08959
+                            <li>4. K. Nishiyama, K. Sugiura, N. Kaji, M. Tokeshi, Y. Baba, Development of a microdevice for facile analysis of theophylline in whole blood by a cloned enzyme donor immunoassay, Lab on a Chip, 19, 233-240 (2019) - This paper was selected as a back cover picture of Lab on a Chip. DOI:10.1039/c8lc01105b
+                            <li>5. M. F. Serag, A. Aikeremu, R. Tsukamoto, H. Piwonski, M. Abadi, N. Kaji, J. R. Dwyer, Y. Baba, S. Habuchi, Geometry-based self-assembly of histone-DNA nanostructures at single-nucleotide resolution, Acs Nano, 13, 8155-8168 (2019) DOI: 10.1021/acsnano.9b03259 </li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Refereed Conference proceedings</h4>
+                        <ul>
+                            <li>1. H. Takahashi, T. Yasui, K. Shinjo, N. Kaji, A. Okamoto, Y. Baba, Microheater-nanowires device for detection of cell-free circulating methylated DNA, The proceedings of μTAS 2019, Basel, 1886-1887 (2019)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2018 -->
+                <div class="publication-year">
+                    <h3 style="color: #2c5282;">2018</h3>
+                    <div class="publication-category">
+                        <h4>Refereed Original Papers</h4>
+                        <ul>
+                            <li>1. A. M. Zeid, N. Kaji, J. J. M. Nasr, F. Belal, M. I. Walash, Y. Baba, Determination of baclofen and vigabatrin by microchip electrophoresis with fluorescence detection: Application of field-enhanced sample stacking and dynamic ph junction, New Journal of Chemistry, 42, 9965-9974 (2018) DOI:10.1039/c8nj00829a
+                            <li>2. H. Yukawa, K. Suzuki, K. Aoki, T. Arimoto, T. Yasui, N. Kaji, T. Ishikawa, T. Ochiya, Y. Baba, Imaging of angiogenesis of human umbilical vein endothelial cells by uptake of exosomes secreted from hepatocellular carcinoma cells, Scientific Reports, 8 (2018) DOI:10.1038/s41598-018-24563-0
+                            <li>3. H. Yasaki, T. Yasui, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, Effect of channel geometry on ionic current signal of a bridge circuit based microfluidic channel, Chemistry Letters, 47, 350-353 (2018) DOI:10.1246/cl.171139
+                            <li>4. H. Yasaki, T. Yasui, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, A real-time simultaneous measurement on a microfluidic device for individual bacteria discrimination, Sensors and Actuators B-Chemical, 260, 746-752 (2018) DOI:10.1016/j.snb.2018.01.079
+                            <li>5. H. Yasaki, T. Shimada, T. Yasui, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, Robust ionic current sensor for bacterial cell size detection, Acs Sensors, 3, 574-579 (2018) DOI:10.1021/acssensors.8b00045
+                            <li>6. T. Shimada, T. Yasui, A. Yokoyama, T. Goda, M. Hara, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, Y. Miyahara, T. Kawai, Y. Baba, Biomolecular recognition on nanowire surfaces modified by the self-assembled monolayer, Lab on a Chip, 18, 3225-3229 (2018) DOI:10.1039/c8lc00438b
+                            <li>7. T. Shimada, H. Yasaki, T. Yasui, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, PM2.5 particle detection in a microfluidic device by using ionic current sensing, Analytical Sciences, 34, 1347-1349 (2018) DOI:10.2116/analsci.18C018
+                            <li>8. M. Sano, N. Kaji, Q. Wu, T. Naito, T. Yasui, M. Taniguchi, T. Kawai, Y. Baba, Quantitative evaluation of dielectric breakdown of silicon micro- and nanofluidic devices for electrophoretic transport of a single DNA molecule, Micromachines, 9 (2018) DOI:10.3390/mi9040180
+                            <li>9. S. Zaitsu, T. Tanabe, K. Oshima, H. Hirata, Theoretical analysis of a molecular optical modulator for a continuous-wave laser based on a hollow-core photonic crystal fiber, Applied Sciences, 8, 1895 (2018)
+                            <li>10. S. Zaitsu, T. Tsuchiya, A molecularly modulated mode-locked laser, Scientific Reports, 8, 12175 (2018)</li>
+                        </ul>
+                    </div>
+                    <div class="publication-category">
+                        <h4>Refereed Conference proceedings</h4>
+                        <ul>
+                            <li>1. T. Suzuki, N. Kaji, H. Yasaki, T. Yasui, Y. Baba, Cell deformability measurement device for labeled-free cancer cells discriminating using ionic current detection, The proceedings of μTAS 2018, Kaohsiung, 347-348 (2018) selected as an oral presentation
+                            <li>2. T. Shimada, H. Yasaki, T. Yasui, A. Hibara, T. Yanagida, N. Kaji, M. Kanai, K. Nagashima, T. Kawai, Y. Baba, Pm2.5 analysis in liquid phase via water film-based collection and microfluidics-based electrical detection, The proceedings of μTAS 2018, Kaohsiung, 270-271 (2018) selected as an oral presentation
+                            <li>3. K. Iijima, N. Kaji, M. Tokeshi, Y. Baba, Micro- and nanochamber array system for single enzyme assays, Scientific Reports, 13, 13322 (2023) DOI: https://doi.org/10.1038/s41598-023-40544-4
+                            <li>4. Y. Kishimoto, S. Ide, T. Naito, Y. Nakashima, Y. Nakanishi, N. Kaji, Development of a microfluidic ion current measurement system for a single microplastic detection, Journal of Robotics and Mechatronics, 35, 1193 (2023) DOI: 10.20965/jrm.2023.p1193
+                            <li>5. Y. Banno, T. Nomiyama, S. Okuno, S. Ide, N. Kaji, Quantitative Evaluation of Interleukin-4 by Immunowall Devices Made of Gelatin Methacryloyl Hydrogel, Molecules, 28, 4635 (2023) DOI: 10.3390/molecules28124635
+                            <li>6. Y. Onizuka, K. Fujita, S. Ide, T. Naito, N. Kaji, Antioxidants encapsulated milk-derived exosomes for functional food development, Analytical Sciences, 39, 705-712 (2023), DOI: 10.1007/s44211-023-00278-9  </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
+        </section>
+
+        <section id="conference" class="section conference-section">
+            <div class="section-nav">
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
+            </div>
+            <h2>Conference Presentations</h2>
+            <div class="conference-content">
+                <!-- 2025 -->
+                <div class="conference-year">
+                    <h3 style="color: #553c9a;">2025</h3>
+                    <div class="conference-category">
+                        <h4>International Conference</h4>
+                        <ul>
+                            <li>1. [Invited] N. Kaji, Cell separation by a sponge monolith column, PITTCON2025, 2025/3/3, Boston, MA</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Domestic conference</h4>
+                        <ul>
+                            <li>1. [ポスター] 腸内細菌―細胞間の相互作用解析が可能な腸管モデルの開発、○前田陽樹、加地範匡、日本化学会第105春季年会、2025年3月26日、吹田
+                            <li>2. [ポスター] 細胞スフェロイドの培養とエクソソームの回収・評価に向けたマイクロデバイス作製、○義永晴雲、真栄城正寿、渡慶次学、加地範匡、日本化学会第105春季年会、2025年3月26日、吹田</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="conference-year">
+                    <h3 style="color: #553c9a;">2024</h3>
+                    <div class="conference-category">
+                        <h4>International Conference</h4>
+                        <ul>
+                            <li>1. [Invited] N. Kaji, Microfluidic immunoassay system for trace amounts of Interleukin, Kyushu University - National Taiwan Normal University Joint Symposium, 20214, 11/29, Fukuoka, Japan
+                            <li>2. [Invited] N. Kaji, Lab on a Chip for a single cell diagnosis, Seminar at Prof. Gaolin Liang's group, 2024/11/19, Southeast University, Nanjing, China
+                            <li>3. [Invited] N. Kaji, A single cell diagnosis on a chip, 10th Shanghai International Symposium on Analytical Chemistry, 2024/11/18, Shanghai, China
+                            <li>4. [Poster] Yusei Tsutsumi, Tetsuya Tanigawa, Takuya Kubo, Noritada Kaji,  A sponge monolith column for cell separation based on cell elasticity, 2024/10/16, Montreal, Canada
+                            <li>5. [Poster] Takuya Kubo, Sayaka Konishi-Yamada, Eisuke Kanao, Tetsuya Tanigawa, Noritada Kaji, Universal design of a macroporous material for the effective separating extracellular vesicles, viruses, and cells, 2024/10/14, Montreal, Canada
+                            <li>6. [Invited] N. Kaji, An ionic current sensing system on a chip for single cell mechanical typing and exosome analysis, PITTCON2024, 2024/2/27, San Diego, CA</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Domestic conference</h4>
+                        <ul>
+                            <li>1. [ポスター] スポンジモノリスカラムの細胞分離への応用、○堤悠生、谷川哲也、久保拓也、加地範匡、第61回化学関連支部合同九州大会、2024年6月29日、北九州
+                            <li>2. [ポスター] 単一細胞分析に向けたPDMS ステンシル作製法の開発、○義永晴雲、加地範匡、第61回化学関連支部合同九州大会、2024年6月29日、北九州
+                            <li>3. [ポスター] 腸内細菌と細胞の共培養デバイス構築に向けたPDMS 多孔膜の作製、○前田陽樹、一番ヶ瀬史奈、加地範匡、第61回化学関連支部合同九州大会、2024年6月29日、北九州</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="conference-year">
+                    <h3 style="color: #553c9a;">2023</h3>
+                    <div class="conference-category">
+                        <h4>International Conference</h4>
+                        <ul>
+                            <li>1. [Invited] N. Kaji, Microfluidic devices for single cells and microplastic analysis, Kyuhu U. -NTNU Joint Symposium, 2023/11/17, Taipei, Taiwan
+                            <li>2. [Keynote] N. Kaji, Single cell microfluidic mechanical typing for cancer stem-like cell diagnosis, 19th Asia-Pacific International Symposium on Microscale Separation and Analysis 2023 (APCE2023), 2023/10/10, Kuala Lumpur, Malaysia
+                            <li>3. [Invited] N. Kaji, A microchip immunoassay system for monitoring interleukin levels in blood for early diagnosis of chronic diseases, Pittcon 2023, PAI-NET (Professionals Network in Advances Instrumentation Society) - Advanced tools for medical diagnostics and pharmaceutical analysis, 2023/3/21, Philladelphia PA</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Domestic conference</h4>
+                        <ul>
+                            <li>1. [ポスター] 腸内細菌叢－細胞共培養デバイスの構築、○前田陽樹、加地範匡、九州分析化学若手の会第36回若手研究講演会および第41回夏期セミナー、2023年7月28日、北九州
+                            <li>2. [ポスター] 単一細胞質量分析イメージングのための細胞分析フォーマットデバイスの開発、○義永晴雲、加地範匡、九州分析化学若手の会第36回若手研究講演会および第41回夏期セミナー、2023年7月28日、北九州
+                            <li>3. [ポスター] GelMAハイドロゲル製イムノウォールデバイスの開発、○番野雄斗、野見山拓真、奥野将真、加地範匡、第60回化学関連支部合同九州大会、2023年7月1日、北九州
+                            <li>4. [依頼講演] マイクロ流体技術を用いた単一細胞解析へのアプローチ、加地範匡、第83回分析化学討論会、2023年5月21日、富山
+                            <li>5. [ポスター] 細胞核のイオン電流計測法による変形能計測、○菊谷吏音、加地範匡、化学とマイクロ・ナノシステム学会　第47回研究会（CHEMINAS47）、2023年5月14日、仙台</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="conference-year">
+                    <h3 style="color: #553c9a;">2022</h3>
+                    <div class="conference-category">
+                        <h4>International Conference</h4>
+                        <ul>
+                            <li>1. [Oral] N. Kaji, High-throughput and label-free cancer stem-like cell assay at a single cell level by microfluidic devices, The 13th Japan-China-Korea Joint Conference on MEMS/NEMS, 2022/10/18, Kagoshima, Japan</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Domestic conference</h4>
+                        <ul>
+                            <li>1. [ポスター] PEG 化PDMS を用いたポアセンサ保管と単一細菌計測への応用、○嶋田泰佑、藤野慶子、安井隆雄、加地範匡、馬場嘉信、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月14日、徳島
+                            <li>2. [ポスター]スポンジモノリスカラムによる細胞の機械的特性に基づいた分離法の開発、○辻健吾、久保拓也、大塚浩二、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月14日、徳島
+                            <li>3. [ポスター]PDMS 多孔質膜を用いた腸管モデルの構築、○一番ヶ瀬史奈、山川暢太、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月14日、徳島
+                            <li>4. [ポスター]単一細胞分析のためのPDMS ステンシルデバイスの開発、○岡圭吾、大塚洋一、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>5. [ポスター]絨毛構造を模倣したマイクロ腸管モデルの作製とその評価、○山川暢太、一番ヶ瀬史奈、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>6. [ポスター]電流センシングによる単一マイクロプラスチックのサイズ分析、○岸本祐汰、三浦夏琳、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>7. [ポスター]PEGDA ハイドロゲルを用いたイムノウォールチップの開発、○奥野将真、野見山拓真、番野雄斗、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>8. [ポスター]GelMA ハイドロゲルを用いた免疫評価マイクロ流体デバイスの開発、○番野雄斗、野見山拓真、奥野将真、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>9. [ポスター]イムノウォールチップを用いたインターロイキン評価系の構築、○野見山拓真、奥野将真、番野雄斗、加地範匡、化学とマイクロ・ナノシステム学会　第46回研究会（CHEMINAS46）、2022年11月16日、徳島
+                            <li>10. [ポスター] マイクロ流体デバイスによる単一マイクロプラスチック分析手法の開発、○岸本祐汰、三浦夏琳、加地範匡、九州分析化学若手の会　第35回若手研究講演会および第40回夏季セミナー、2022年7月30日、オンライン、九州分析化学若手賞　受賞
+                            <li>11. [依頼講演] Lab on a chipからlife on a chipへ～分子診断から細胞診断まで～、加地範匡、第70回分子システム科学センター(CMS)セミナー、2022年6月16日、オンライン
+                            <li>12. [依頼講演] マイクロ流体デバイスによる単一細胞解析法の開発とクロマトグラフィーへの展開、加地範匡、第29回　クロマトグラフィーシンポジウム、2022年6月9日、石垣</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Others</h4>
+                        <ul>
+                            <li>[出前講義] ナノバイオテクノロジーの最前線、加地範匡、出前講義、2022年7月25日、鹿児島玉龍中学校・高等学校</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="conference-year">
+                    <h3 style="color: #553c9a;">2021</h3>
+                    <div class="conference-category">
+                        <h4>International Conference</h4>
+                        <ul>
+                            <li>1. [Oral] N. Kaji, Circulating tumor cell (CTC) separation by microfluidic palpation devices, PACIFICHEM2021, 2021/12/21, Onl-line
+                            <li>2. [Invited] N. Kaji, Single cell palpation device for a novel non-labeling and non-destructive cell analytical technique, PACIFICHEM2021, 2021/12/21, Onl-line  
+                            <li>3. [Invited] N. Kaji, Continuous separation and modification of extracellular vesicles in micro and nanofluidic devices, PACIFICHEM2021, 2021/12/19, Onl-line
+                            <li>4. [Poster] N. Kimura, T. Nomiyama, T. Naito, M. Maeki, M. Tokeshi, N. Kaji, Microfluidic methodologies for production of small-sized various artificail exosomes, The proceedings of μTAS 2021, Palm Springs, 355-356 (2021) 2021/10/11, On-line
+                            <li>5. [Poster] T. Ito, T. Naito, H. Terada, Y. Otsuka, N. Kimura, N. Kaji, Microwell array devices for phospholipids imaging in single cells by scanning prove electrospray ionization mass spectrometry, The proceedings of μTAS 2021, Palm Springs, 593-594 (2021) 2021/10/13, On-line
+                            <li>6. [Poster] K. Fujita, N. Kimura, T. Naito, N. Kaji, Development of a micro-electroporation system for high throughput production of anticancer drug-loaded exosomal nanomedicines, The proceedings of μTAS 2021, Palm Springs, 659-660 (2021) 2021/10/13, On-line
+                            <li>7. [Poster] K. Fujino, T. Shimada, T. Yasui, K. Nagashima, T. Yanagida, N. Kaji, Y. Baba, Analyzing particulate matters via surfactant-assisted microfluidic ionic current sensing with machine learning-driven idntification, The proceedings of μTAS 2021, Palm Springs, 1481-1482 (2021) 2021/10/12, On-line
+                            <li>8. [Keynote] A single cell analysis technique on a chip for cancer research, Noritada Kaji, China-Japan-Korea Scientific Instrument Development Forum (The 23rd Annual Meeting of the Chinese Association of Science and Technology), 2021/7/27, Beijing, China (A hybrid event together with in-person and virtual attendees)
+                            <li>9. [Keynote] A single cell mechanical assay on a chip, Noritada Kaji, e-MSB 2021 (37th International Symposium on Microscale Separations and Bioanalysis), 2021/7/14, Virtual Edition</li>
+                        </ul>
+                    </div>
+                    <div class="conference-category">
+                        <h4>Domestic conference</h4>
+                        <ul>
+                            <li>1. [ポスター] スポンジモノリスカラムを用いた細胞分離法の開発、○辻 健吾1・内藤 豊裕1・木村 笑1・久保 拓也2・大塚 浩二2・加地 範匡1（九大工1・京大工2）、化学とマイクロ・ナノシステム学会第44回研究会（CHEMINAS44）、2021年11月11日、オンライン
+                            <li>2. [ポスター] PDMSと細胞の接着特性を利用した細胞と細菌の共培養環境構築、○一番ヶ瀬 史奈・内藤 豊裕・木村 笑・加地 範匡（九大院工）、化学とマイクロ・ナノシステム学会第44回研究会（CHEMINAS44）、2021年11月11日、オンライン
+                            <li>3. [依頼講演]オンチップ単一細胞センシング、加地範匡、CHEMINAS44, Future Technologies from Himeji 合同招待セッション、2021年11月10日、オンライン
+                            <li>4. [依頼講演] マイクロ流体デバイスを用いた単一細胞解析アプローチ、加地範匡、ナノ・マイクロ化学分析研究懇談会、日本分析化学会第70年会、2021年9月24日、オンライン
+                            <li>5. [ポスター] 単一細胞MSイメージングのためのマイクロウェルの構築、○伊藤 駿宏1・内藤 豊裕2・寺田 光3・大塚 洋一4・加地 範匡2（九大院工学府1・九大工2・阪大院理3・阪大理4）、第81回分析化学討論会（日本分析化学会）、2021年5月23日、オンライン</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
+        </section>
+
+        <section id="photo" class="section photo-section">
+            <div class="section-nav">
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
             </div>
             <h2>Photo</h2>
             <div class="photo-gallery">
                 <div class="photo-item">
-                    <img src="https://lh3.googleusercontent.com/_gxctYJs-XZUhhIF1NuqGfKAxdYPvsmaz3GaK8rD_broQEzGfG7Q5fadEhwUk59V0V91x4HH39kZ44nlnNN_KDL_lG5unVxlsb5HKqINdaALi9YHN7WQ3uYGgmIvY74c9Q=w1280" alt="第61回化学関連支部合同九州大会">
                     <div class="photo-caption">
                         <h3>第61回化学関連支部合同九州大会</h3>
                         <p>学会発表の様子</p>
                     </div>
-                </div>
-                <div class="photo-item">
-                    <img src="https://lh4.googleusercontent.com/zSNiLBX6UnDOk_a4OCrxuegeUgI0MfphrBfSmQg_IzDS3EhKwNxoyHaV9rCfmNnpGZXkGQ=w16383" alt="Research Activity">
-                    <div class="photo-caption">
-                        <h3>Research Activity</h3>
-                        <p>研究活動の様子</p>
+                    <div class="additional-photos">
+                        <img src="img/event1.jpg" alt="学会発表1" class="additional-photo">
+                        <img src="img/event2.jpg" alt="学会発表2" class="additional-photo">
                     </div>
                 </div>
             </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
         </section>
 
-        <section id="access" class="section">
+        <section id="access" class="section access-section">
             <div class="section-nav">
-                <a href="#" data-section="home" class="nav-link">Home</a>
-                <a href="#" data-section="people" class="nav-link">People</a>
-                <a href="#" data-section="research" class="nav-link">Research</a>
-                <a href="#" data-section="publications" class="nav-link">Publications</a>
-                <a href="#" data-section="conference" class="nav-link">Conference</a>
-                <a href="#" data-section="photo" class="nav-link">Photo</a>
+                <span class="site-title">Kaji Research Group</span>
+                <div class="nav-links">
+                    <a href="#" data-section="home" class="nav-link">Home</a>
+                    <a href="#" data-section="people" class="nav-link">People</a>
+                    <a href="#" data-section="research" class="nav-link">Research</a>
+                    <a href="#" data-section="publications" class="nav-link">Publications</a>
+                    <a href="#" data-section="conference" class="nav-link">Conference</a>
+                    <a href="#" data-section="photo" class="nav-link">Photo</a>
+                    <a href="#" data-section="access" class="nav-link">Access</a>
+                </div>
             </div>
             <h2>Access</h2>
-            <div class="access-info">
-                <div class="info-item">
-                    <h3>Address</h3>
-                    <p>研究室の住所を記載予定です。</p>
+            <div class="access-container">
+                <div class="access-info">
+                    <div class="info-item">
+                        <h3>Address</h3>
+                        <p>〒819-0395  福岡市西区元岡744<br>
+                           ウエスト3号館4F</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>TEL</h3>
+                        <p>092-802-2886</p>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>Email</h3>
-                    <p>連絡先メールアドレスを記載予定です。</p>
-                </div>
-                <div class="info-item">
-                    <h3>Phone</h3>
-                    <p>電話番号を記載予定です。</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.3745953731286!2d130.2143476749623!3d33.59558384170638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541e9dbc5b27ad9%3A0x16e477d0c759bfb!2z5Lmd5bee5aSn5a2m5LyK6YO944Kt44Oj44Oz44OR44K5IOOCpuOCqOOCueODiDPlj7fppKg!5e0!3m2!1sja!2sjp!4v1745307415916!5m2!1sja!2sjp" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
+            <footer class="footer">
+                <p>&copy; 2025 Kaji Research Group. All rights reserved.</p>
+            </footer>
         </section>
     </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 Kaji Research Group. All rights reserved.</p>
-    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
